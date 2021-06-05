@@ -5,17 +5,17 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='getuseragent',
-    version='0.0.4',
+    version='0.0.6',
     author="Paul Biswell",
     author_email="pblabsdev@gmail.com",
     description="Get a random, popular, commonly-used user agent string. Random/fake/spoof user agents.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pbiswell/getuseragents",
+    url="https://github.com/pbiswell/getuseragent",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',

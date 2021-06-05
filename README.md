@@ -1,5 +1,20 @@
 # GetUserAgent - Random/Fake/Spoof Common User Agents
 
+**Table of Contents**
+- [GetUserAgent - Random/Fake/Spoof Common User Agents](#getuseragent---randomfakespoof-common-user-agents)
+  - [Intro](#intro)
+  - [Installation](#installation)
+  - [Features](#features)
+  - [Use Cases](#use-cases)
+  - [Code Examples](#code-examples)
+    - [Initialisation](#initialisation)
+    - [User-Agents Available](#user-agents-available)
+    - [Combination](#combination)
+    - [Print Random User Agent From List](#print-random-user-agent-from-list)
+    - [Performance / Limiting](#performance--limiting)
+    - [Requests Handler](#requests-handler)
+  - [To Do](#to-do)
+  - [Changes](#changes)
 ## Intro
 
 This is just a simple python module to produce a random, commonly used user agents each time. It contains 11 lists for a total of 1,100 user agents. You can choose and combine lists depending on your needs.
@@ -184,7 +199,7 @@ page = requests.get("https://google.com", headers=myuseragent)
 
 ## Changes
 
-- 0.0.2 - 0.0.5
+- 0.0.2 - 0.0.6
   
 ```
 Fixed package errors, spelling mistakes
