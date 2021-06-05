@@ -31,7 +31,7 @@ pip install getuseragent
 ### Initialisation
 
 ```python
-import getuseragent
+from getuseragent import UserAgent
 
 useragent = UserAgent()
 
@@ -161,7 +161,7 @@ You can enable the option to return your user agents ready to be used with the r
 ```python
 # Example
 import requests
-import getuseragent
+from getuseragent import UserAgent
 
 myuseragent = UserAgent("all", requestsPrefix=True).Random()
 
@@ -184,6 +184,14 @@ page = requests.get("https://google.com", headers=myuseragent)
 
 ## Changes
 
+- 0.0.2 - 0.0.5
+  
+```
+Fixed package errors, spelling mistakes
+```
+
 - 0.0.1
 
-    Initial release
+```
+Initial release
+```

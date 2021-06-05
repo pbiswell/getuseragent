@@ -5,8 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='getuseragent',
-    version='0.0.1',
-    scripts=['getuseragent'],
+    version='0.0.4',
     author="Paul Biswell",
     author_email="pblabsdev@gmail.com",
     description="Get a random, popular, commonly-used user agent string. Random/fake/spoof user agents.",

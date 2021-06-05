@@ -1,14 +1,13 @@
 """
 Name: GetUserAgents
 Author: Paul Biswell
-Version: 0.0.1
+Version: 0.0.4
 Link: https://github.com/pbiswell/getuseragents
 """
-#from getuseragent import retrieve
 import random
-import retrieve
+from  getuseragent import retrieve
 
-version = "0.0.1"
+version = "0.0.5"
 
 class UserAgent:
     def __init__(self, ua="all", limit=0, total=0, requestsPrefix=False):
