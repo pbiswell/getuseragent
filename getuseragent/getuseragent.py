@@ -1,13 +1,14 @@
 """
 Name: GetUserAgents
 Author: Paul Biswell
-Version: 0.0.6
+Version: 0.0.7
 Link: https://github.com/pbiswell/getuseragent
 """
 import random
-from  getuseragent import retrieve
+from getuseragent import retrieve
+#import retrieve
 
-version = "0.0.6"
+version = "0.0.7"
 
 class UserAgent:
     def __init__(self, ua="all", limit=0, total=0, requestsPrefix=False):
@@ -31,7 +32,6 @@ class UserAgent:
             self.list = retrieve.GetList(self.ua.split('+'), limit=self.limit)
         else:
             self.list = retrieve.GetList(limit=self.limit)
-        
         if self.total > 0:
             random.shuffle(self.list)
             self.list = self.list[0:self.total]

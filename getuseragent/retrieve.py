@@ -9,9 +9,12 @@ sets = {
         "desktop": ["windows", "mac", "linux"],
         }
 
-def GetFileContents(f):
+def GetFileContents(f, limit):
     # TODO: Add checks. Currently assumes files exist.
-    return pkgutil.get_data(__name__, folder+f+filetype).decode("utf-8").splitlines()
+    li = pkgutil.get_data(__name__, folder+f+filetype).decode("utf-8").splitlines()
+    if limit > 0:
+        li = li[0:limit]
+    return li
 
 def GetList(ua=["all"], limit=0):
     cList = []
@@ -29,5 +32,5 @@ def GetList(ua=["all"], limit=0):
         if i not in cList:
             cList.append(i)
     for i in cList:
-        fList.extend(GetFileContents(i))
+        fList.extend(GetFileContents(i, limit))
     return fList
