@@ -203,7 +203,11 @@ page = requests.get("https://google.com", headers=myuseragent)
 
 ```
 Added individual list limits, which can be used when using one or multiple lists.
-For example, if you used UserAgent("firefox+ios", limit=5), it would limit each list to 5 user agents, and two lists, bringing the total user agents 10.
+For example, if you used:
+
+UserAgent("firefox+ios", limit=5)
+
+It would limit each list to 5 user agents, and two lists, bringing the total user agents 10.
 ```
 
 - 0.0.2 - 0.0.6
