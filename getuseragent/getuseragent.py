@@ -6,7 +6,7 @@ Link: https://github.com/pbiswell/getuseragent
 """
 import random
 from getuseragent import retrieve
-#import retrieve
+import logging
 
 version = "0.0.7"
 
@@ -38,4 +38,8 @@ class UserAgent:
             
     def Random(self):
         """ Returns random user agent based on your chosen settings """
-        return self.Format(random.choice(self.list))
+        if len(self.list) > 0:
+            return self.Format(random.choice(self.list))
+        else:
+            logging.error("User agents list empty")
+            return

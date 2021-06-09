@@ -165,6 +165,16 @@ useragent = UserAgent("chrome+firefox+ios")
 # (List is randomised before truncating)
 useragent = UserAgent("chrome+firefox+ios", total=50)
 
+# You can limit individual lists
+# This would give 10 firefox user agents + 10 safari user agents
+# The total amount of user agents available would be 20
+useragent = UserAgent("firefox+safari", limit=10)
+
+# You can combine limit and total
+# This would get 10 user agents for both android and ie, for 20 user agents
+# The list would be randomised, then reduced to 15 total available user agents
+useragent = UserAgent("android+ie", limit=10, total=15)
+
 # Print a random user agent
 print(useragent.Random())
 ```
@@ -202,12 +212,15 @@ page = requests.get("https://google.com", headers=myuseragent)
 - 0.0.7 (June 9th, 2021)
 
 ```
-Added individual list limits, which can be used when using one or multiple lists.
+1. Added individual list limits, which can be used when using one or multiple lists.
 For example, if you used:
 
 UserAgent("firefox+ios", limit=5)
 
 It would limit each list to 5 user agents, and two lists, bringing the total user agents 10.
+
+2. Checks if user agent files exist.
+3. Checks if user list empty in Random()
 ```
 
 - 0.0.2 - 0.0.6
