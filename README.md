@@ -206,6 +206,7 @@ page = requests.get("https://google.com", headers=myuseragent)
 - Custom list(s)
 - Command line arguments
 - Improve Readme
+- Selenium
 
 ## Changes
 
