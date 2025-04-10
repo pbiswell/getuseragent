@@ -19,6 +19,8 @@
 
 This is just a simple python module to produce a random, commonly used user agents each time. It contains 11 lists for a total of 1,100 user agents. You can choose and combine lists depending on your needs.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V84X6JM)
+
 ## Installation
 
 Assumes you have python3 installed.
