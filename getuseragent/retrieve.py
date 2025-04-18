@@ -28,7 +28,7 @@ def GetFileContents(f, limit=0):
         logging.error("User agents file does not exist, skipping: "+f+filetype)
     return li
 
-def GetList(ua=["all"], limit=0):
+def GetList(ua=["all"], limit=0, fallback_all=True):
     cList = []
     uList = []
     fList = [] # Final List
@@ -38,9 +38,10 @@ def GetList(ua=["all"], limit=0):
         elif type in sets:
             uList.extend(sets[type])
         else:
-            # Sends set "all" if the selection is invalid. Needs improving.
-            logging.warning("Selected user agents list doesn't exist, using default list")
-            uList.extend(sets["all"])
+            if fallback_all:
+                # By default sends user agent list "all" if the selection is invalid. Needs improving.
+                logging.warning("Selected user agents list doesn't exist, using default list")
+                uList.extend(sets["all"])
     # Remove duplicate lists
     for i in uList:
         if i not in cList:
@@ -48,6 +49,6 @@ def GetList(ua=["all"], limit=0):
     # Get user agents from file(s)
     for i in cList:
         toAdd = GetFileContents(i, limit)
-        if toAdd:
+        if toAdd != None:
             fList.extend(toAdd)
     return fList
